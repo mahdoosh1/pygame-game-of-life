@@ -41,7 +41,7 @@ while True:
 			pygame.quit()
 		if event.type == pygame.MOUSEBUTTONDOWN:
 			(mousex, mousey) = pygame.mouse.get_pos()
-			clickx, clicky = int(mx*reverse_scale_factor), int(my*reverse_scale_factor)
+			clickx, clicky = int(mousex*reverse_scale_factor), int(mousey*reverse_scale_factor)
 			if clickx < x and clicky < y:
 				field[clicky][clickx] = 1-field[clicky][clickx]
 				drawframe(screen,field,False)
