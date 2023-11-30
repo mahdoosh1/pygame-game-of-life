@@ -9,7 +9,7 @@ c: clear      mouse click: toggle cell
 e: toggle between Conway's gol and DayNight gol
 
 # Field
-50x50 random area (can be changed in main.py) if you increase this, performance may differ
+50x50 empty area (can be changed in main.py) if you increase this, performance may differ
 area type: looping (if cell goes off screen, cell will appear in other side)
 fps: unlimited
 
@@ -23,7 +23,7 @@ myrule = {
 "born"; "3",      # required neighborhoods to give birth
 }
 ```
-New!(WIP) rule structure:
+New!(WIP and slow) rule structure:
 ```
 myrule = {
 "type": 8             # just like normal
