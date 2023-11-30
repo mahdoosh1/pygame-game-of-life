@@ -15,13 +15,22 @@ fps: unlimited
 
 # Engine
 custom engine by me.
-rule structure:
+normal rule structure:
 ```
 myrule = {
-"type" = 8        # 8 is moore and 4 is von something
-"survive" = "23",  # required neighborhoods to survive
-"born" = "3",      # required neighborhoods to give birth
+"type": 8        # 8 is moore and 4 is von something
+"survive": "23",  # required neighborhoods to survive
+"born"; "3",      # required neighborhoods to give birth
 }
+```
+New!(WIP) rule structure:
+```
+myrule = {
+"type": 8             # just like normal
+"0:1": ["1:3"]        # 0 becomes 1 if there's 3 1's near
+"1:0": ["not","1:23"] # 1 becomes 0 if there's not 2 or 3 1's
+}
+you can use `True`, `False`, `and`, `or`, `not`, `^` and more!
 ```
 # About code
 if you want to contribute you can create an issue
